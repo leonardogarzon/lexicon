@@ -1,0 +1,42 @@
+.portal {
+  display: grid;
+  height: 100%;
+  grid-template:
+    "header header"
+    "nav section"
+    "footer footer";
+
+  grid-template-columns: min-content auto;
+}
+
+.portal .header {
+  grid-area: header;
+}
+
+.portal .nav {
+  grid-area: nav;
+}
+
+.portal .section {
+  grid-area: section;
+}
+
+.portal .footer {
+  grid-area: footer;
+}
+
+@media (max-width: 992px) {
+  .portal {
+    grid-template:
+      "header"
+      "section"
+      "footer";
+    grid-template-columns: auto;
+  }
+
+  .portal .nav {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+  }
+}
