@@ -1,12 +1,10 @@
 import ClayForm, { ClayInput } from "@clayui/form";
 import ClayLayout from "@clayui/layout";
-import ClayDatePicker from "@clayui/date-picker";
-const spritemap = "/images/icons/icons.svg";
 
-const DateControl = ({
+const TextAreaControl = ({
   id,
+  placeholder,
   value,
-  placeholder="YYYY-MM-DD",
   onChange,
   label,
   sm,
@@ -19,16 +17,13 @@ const DateControl = ({
     <ClayLayout.Col sm={sm} md={md} xl={xl}>
       <ClayForm.Group className={error && "has-error"}>
         <label htmlFor={id}>{label}</label>
-        <ClayDatePicker
+        <ClayInput
           id={id}
-          onChange={onChange}
+          component="textarea"
           placeholder={placeholder}
-          spritemap={spritemap}
+          type="text"
           value={value}
-          years={{
-            end: 2024,
-            start: 1997,
-          }}
+          onChange={onChange}
         />
         {error && (
           <ClayForm.FeedbackGroup>
@@ -43,4 +38,4 @@ const DateControl = ({
   );
 };
 
-export default DateControl;
+export default TextAreaControl;

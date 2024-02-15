@@ -1,12 +1,9 @@
-import ClayForm, { ClayInput } from "@clayui/form";
+import ClayForm, { ClayToggle } from "@clayui/form";
 import ClayLayout from "@clayui/layout";
-import ClayDatePicker from "@clayui/date-picker";
-const spritemap = "/images/icons/icons.svg";
 
-const DateControl = ({
+const CheckBoxControl = ({
   id,
   value,
-  placeholder="YYYY-MM-DD",
   onChange,
   label,
   sm,
@@ -15,21 +12,11 @@ const DateControl = ({
   error,
   errorMessage,
 }) => {
+
   return (
     <ClayLayout.Col sm={sm} md={md} xl={xl}>
       <ClayForm.Group className={error && "has-error"}>
-        <label htmlFor={id}>{label}</label>
-        <ClayDatePicker
-          id={id}
-          onChange={onChange}
-          placeholder={placeholder}
-          spritemap={spritemap}
-          value={value}
-          years={{
-            end: 2024,
-            start: 1997,
-          }}
-        />
+        <ClayToggle label={label} onToggle={onChange} toggled={value} />
         {error && (
           <ClayForm.FeedbackGroup>
             <ClayForm.FeedbackItem id={id}>
@@ -43,4 +30,4 @@ const DateControl = ({
   );
 };
 
-export default DateControl;
+export default CheckBoxControl;
