@@ -4,8 +4,8 @@ import ModalControl from "@components/formControls/Modal.control";
 import LayoutControl from "@components/formControls/Layout.control";
 import TextBoxControl from "@components/formControls/TextBoxControl.control";
 import DateControl from "@components/formControls/Date.control";
-import ButtonGroupControl from "../components/formControls/ButtonGroup.control";
-import ButtonControl from "../components/formControls/Button.control";
+import ButtonGroupControl from "@components/formControls/ButtonGroup.control";
+import ButtonControl from "@components/formControls/Button.control";
 
 const ClientsPage = () => {
   const columns = [
