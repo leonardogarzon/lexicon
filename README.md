@@ -44,3 +44,4 @@ Se ejecuta en [http://localhost:3000](http://localhost:3000)
 - Aunque tiene personalización de idioma, esta no es general; requiere ser configurada en cada componente.
 - Los controles tienen estilos para indicar error, advertencias y confirmaciones, pero requiere realizar adaptación para usarlos.
 - No cuenta con una interfaz oscura por defecto.
+- Existe u conflicto de pocicion entre el modal y los date pickers quedando el calendario oculto

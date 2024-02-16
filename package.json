@@ -23,6 +23,7 @@
     "@clayui/nav": "^3.109.0",
     "@clayui/pagination-bar": "^3.109.0",
     "@clayui/panel": "^3.110.0",
+    "@clayui/management-toolbar": "^3.111.0",
     "formik": "^2.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

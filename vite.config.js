@@ -11,12 +11,13 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@assets': path.resolve(__dirname, './src/assets'),
-      '@components': path.resolve(__dirname, './src/components'),
-      '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@providers': path.resolve(__dirname, './src/providers'),
-      '@routers': path.resolve(__dirname, './src/routers'),
+      '@assets': path.resolve(process.cwd(), './src/assets'),
+      '@components': path.resolve(process.cwd(), './src/components'),
+      '@hooks': path.resolve(process.cwd(), './src/hooks'),
+      '@pages': path.resolve(process.cwd(), './src/pages'),
+      '@providers': path.resolve(process.cwd(), './src/providers'),
+      '@routers': path.resolve(process.cwd(), './src/routers'),
+      '@common': path.resolve(process.cwd(), './src/common'),
     },
   },
 })
