@@ -1,0 +1,61 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.portal {
+  display: grid;
+  height: 100%;
+  grid-template:
+    "header header"
+    "nav section"
+    "footer footer";
+  grid-template-rows: min-content auto min-content;
+  grid-template-columns: min-content auto;
+
+  .header {
+    grid-area: header;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .section {
+    grid-area: section;
+    overflow: auto;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+@media (max-width: 992px) {
+  .portal {
+    grid-template:
+      "header"
+      "section"
+      "footer";
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto min-content;
+    .nav {
+      display: none;
+      visibility: hidden;
+      position: fixed;
+    }
+   
+  }
+}
+
+@media (min-width: 993px) {
+  .portal {
+    .footer {
+      display: none;
+      visibility: hidden;
+      position: fixed;
+    }
+  }
+}

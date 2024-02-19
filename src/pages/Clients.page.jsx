@@ -40,7 +40,7 @@ const ClientsPage = () => {
         <ButtonGroupControl>
           <ModalControl
             title="Create Client"
-            buttonTitle="Crate Client"
+            buttonTitle="Create Client"
             footer={
               <>
                 <ButtonGroupControl>

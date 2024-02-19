@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "@clayui/css/lib/css/atlas.css";
-import "./index.css";
+import "@clayui/css/src/scss/atlas.scss";
+import "./index.scss";
 
 const spritemap = "icons.svg";
 

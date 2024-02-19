@@ -3,13 +3,17 @@
 ## Instalacion
 
 ```bash
-npm install -f
+# Se requiere la instalacion previa de yarn
+npm install --global yarn
+
+# instalar paquetes
+yarn install
 ```
 
 ## Ejecutar
 
 ```bash
-npm dev
+yarn  dev
 ```
 
 Se ejecuta en [http://localhost:3000](http://localhost:3000)
@@ -34,7 +38,7 @@ Se ejecuta en [http://localhost:3000](http://localhost:3000)
 
 ## Problemas Encontrados
 
-- La instalación no cuenta con soporte directo para React 18, pero puede ser usado forzando la instalación de las dependencias. A pesar de esto, el proyecto se encuentra activo con actualizaciones recientes y se espera el soporte para React 18.
+- La instalación no cuenta con soporte directo para React 18 con el gestor de paquetes npm, pero puede ser usado forzando la instalación de las dependencias. A pesar de esto, el proyecto se encuentra activo con actualizaciones recientes y soporte de pauetes en yarn
 - La instalación de los iconos requiere la publicación de los recursos en assets y la asignación de su ruta para algunos componentes.
 - El data grid presenta problemas con los iconos internos.
 - La información se encuentra dispersa entre el Storybook y Clay (sitio de la implementación con React).
