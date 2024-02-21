@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const spritemap = "/images/icons/icons.svg";
 
-const ModalControl = ({ children, title, buttonTitle, footer }) => {
+const ModalControl = ({ children, title, buttonTitle, footer, type }) => {
   const { observer, onOpenChange, open } = useModal();
 
   return (
@@ -14,7 +14,7 @@ const ModalControl = ({ children, title, buttonTitle, footer }) => {
           observer={observer}
           size="lg"
           spritemap={spritemap}
-          status="info"
+          status={type}
         >
           <ClayModal.Header>{title}</ClayModal.Header>
           <ClayModal.Body>{children}</ClayModal.Body>

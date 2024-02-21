@@ -12,6 +12,18 @@ const FormPage = () => {
   return (
     <>
       <TitleControl level={1}>Form Demo</TitleControl>
+      <h3 className="autofit-row sheet-subtitle">
+			<span className="autofit-col autofit-col-expand">
+				<span className="heading-text">Enter your personal details</span>
+			</span>
+			<span className="autofit-col">
+				<span className="heading-end">
+					{/* <button class="btn btn-secondary btn-sm" type="button">
+						Add
+					</button> */}
+				</span>
+			</span>
+		</h3>
       <PanelControl title="Personal Information" expanded={true}>
         <LayoutControl justify="start">
           <TextBoxControl

@@ -1,5 +1,8 @@
 import ClayForm, { ClayInput } from "@clayui/form";
+import { ClayIconSpriteContext } from "@clayui/icon";
 import ClayLayout from "@clayui/layout";
+
+const spritemap = "/images/icons/icons.svg";
 
 const TextBoxControl = ({
   id,
@@ -28,8 +31,10 @@ const TextBoxControl = ({
         {error && (
           <ClayForm.FeedbackGroup>
             <ClayForm.FeedbackItem id={id}>
-              <ClayForm.FeedbackIndicator symbol="exclamation-full" />
-              {errorMessage}
+              <ClayIconSpriteContext.Provider value={spritemap}>
+                <ClayForm.FeedbackIndicator symbol="exclamation-full" />
+                {errorMessage}
+              </ClayIconSpriteContext.Provider>
             </ClayForm.FeedbackItem>
           </ClayForm.FeedbackGroup>
         )}

@@ -7,7 +7,6 @@ import DateControl from "@components/formControls/Date.control";
 import ButtonGroupControl from "@components/formControls/ButtonGroup.control";
 import ButtonControl from "@components/formControls/Button.control";
 import clients from "@common/mocks/clients";
-import ToolBarControl from "@components/formControls/ToolBar.component";
 
 const ClientsPage = () => {
   const columns = [
@@ -35,12 +34,15 @@ const ClientsPage = () => {
   return (
     <>
       <TitleControl level={1}>Clients Page</TitleControl>
-
-      <ToolBarControl>
-        <ButtonGroupControl>
-          <ModalControl
-            title="Create Client"
-            buttonTitle="Create Client"
+      <h3 className="autofit-row sheet-subtitle">
+			<span className="autofit-col autofit-col-expand">
+				<span className="heading-text">Registered Customers in the application</span>
+			</span>
+			<span className="autofit-col">
+				<span className="heading-end">
+        <ModalControl
+            title="Create"
+            buttonTitle="Create"
             footer={
               <>
                 <ButtonGroupControl>
@@ -89,8 +91,9 @@ const ClientsPage = () => {
               />
             </LayoutControl>
           </ModalControl>
-        </ButtonGroupControl>
-      </ToolBarControl>
+				</span>
+			</span>
+		</h3>
 
       <GridControl columns={columns} rows={clients} offset={5} />
     </>

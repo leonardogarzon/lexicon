@@ -1,7 +1,7 @@
 import ClayLayout from "@clayui/layout";
 
-const ContainerControl = ({ children }) => {
-  return <ClayLayout.ContainerFluid view>{children}</ClayLayout.ContainerFluid>;
+const ContainerControl = ({ children, style }) => {
+  return <ClayLayout.ContainerFluid view style={style}>{children}</ClayLayout.ContainerFluid>;
 };
 
 export default ContainerControl;
