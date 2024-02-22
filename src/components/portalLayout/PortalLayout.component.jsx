@@ -12,7 +12,7 @@ const PortalLayout = ({ children }) => {
           <HeaderComponent />
         </div>
         <div className={styles.nav}>
-          <NavComponent />
+          <NavComponent/>
         </div>
         <div className={styles.section}>
           <ContainerControl>{children}</ContainerControl>

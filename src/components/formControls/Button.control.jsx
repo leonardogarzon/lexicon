@@ -1,8 +1,14 @@
 import ClayButton from "@clayui/button";
 
-const ButtonControl = ({ children, displayType = "primary", onClick }) => {
+const ButtonControl = ({
+  children,
+  displayType,
+  onClick,
+  disabled,
+  ariaLabel,
+}) => {
   return (
-    <ClayButton displayType={displayType} onClick={onClick}>
+    <ClayButton aria-label={ariaLabel} displayType={displayType} onClick={onClick} disabled={disabled}>
       {children}
     </ClayButton>
   );

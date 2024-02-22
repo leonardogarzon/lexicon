@@ -1,11 +1,14 @@
-import ClayButton from "@clayui/button";
 import ClayModal, { useModal } from "@clayui/modal";
 import { useEffect } from "react";
 
 const spritemap = "/images/icons/icons.svg";
 
-const ModalControl = ({ children, title, buttonTitle, footer, type }) => {
-  const { observer, onOpenChange, open } = useModal();
+const ModalControl = ({ children, title, type, openState }) => {
+  const { observer, onOpenChange, open, onClose } = useModal();
+
+  useEffect(() => {
+    onOpenChange(openState);
+  }, [openState]);
 
   return (
     <>
@@ -15,15 +18,22 @@ const ModalControl = ({ children, title, buttonTitle, footer, type }) => {
           size="lg"
           spritemap={spritemap}
           status={type}
+          disableAutoClose={true}
         >
           <ClayModal.Header>{title}</ClayModal.Header>
-          <ClayModal.Body>{children}</ClayModal.Body>
-          <ClayModal.Footer last={footer} />
+          {children}
         </ClayModal>
       )}
-      <ClayButton onClick={() => onOpenChange(true)}>{buttonTitle}</ClayButton>
     </>
   );
 };
 
-export default ModalControl;
+const ModalFooterControl = ({ children }) => {
+  return <ClayModal.Footer last={children} />;
+};
+
+const ModalBodyControl = ({ children }) => {
+  return <ClayModal.Body>{children}</ClayModal.Body>;
+};
+
+export { ModalControl, ModalFooterControl, ModalBodyControl };

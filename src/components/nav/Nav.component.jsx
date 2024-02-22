@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const spritemap = "/images/icons/icons.svg";
 
-const NavComponent = () => {
+const NavComponent = ({style}) => {
   const navigate = useNavigate();
   const [active, setActive] = useState("1");
 
@@ -39,6 +39,7 @@ const NavComponent = () => {
       items={items}
       large={false}
       onClick
+      style={style}
       spritemap={spritemap}
     >
       {(item) => (

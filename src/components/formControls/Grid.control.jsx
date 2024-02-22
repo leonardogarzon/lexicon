@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Body, Cell, Head, Row, Table } from "@clayui/core";
 import { ClayPaginationBarWithBasicItems } from "@clayui/pagination-bar";
 
@@ -15,6 +15,9 @@ const GridControl = ({ rows, columns, offset }) => {
     setItems(newRows);
   };
 
+  useEffect(() => {
+    setItems(rows.slice(0, delta));
+  }, [rows]);
 
   return (
     <>

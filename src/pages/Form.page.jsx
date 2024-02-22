@@ -6,24 +6,14 @@ import TextAreaControl from "@components/formControls/TextAreaControl.control";
 import PanelControl from "@components/formControls/Panel.control";
 import CheckBoxControl from "@components/formControls/CheckBox.control";
 import ComboBoxControl from "@components/formControls/ComboBox.component";
+import Subtitlecontrol from "@components/formControls/Subtitle.control";
 
 const FormPage = () => {
   const items = ["C.C", "T.I", "C.E", "Pasaporte", "Nit"];
   return (
     <>
       <TitleControl level={1}>Form Demo</TitleControl>
-      <h3 className="autofit-row sheet-subtitle">
-			<span className="autofit-col autofit-col-expand">
-				<span className="heading-text">Enter your personal details</span>
-			</span>
-			<span className="autofit-col">
-				<span className="heading-end">
-					{/* <button class="btn btn-secondary btn-sm" type="button">
-						Add
-					</button> */}
-				</span>
-			</span>
-		</h3>
+      <Subtitlecontrol subtitle="Enter your personal details"></Subtitlecontrol>
       <PanelControl title="Personal Information" expanded={true}>
         <LayoutControl justify="start">
           <TextBoxControl
